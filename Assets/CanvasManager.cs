@@ -23,6 +23,7 @@ public class CanvasManager : Singleton<CanvasManager>
         SwitchCanvas(CanvasType.MainMenu);
     }
 
+    /// <summary> Switches the canvas to the desired canvas type </summary>
     public void SwitchCanvas(CanvasType canvasType)
     {
         if (activeCanvas != null)
@@ -38,7 +39,7 @@ public class CanvasManager : Singleton<CanvasManager>
         }
         else
         {
-            Debug.LogWarning("The canvas was not found.");
+            Debug.LogWarning("The desired canvas:" + desiredCanvas + " was not found.");
         }
 
     }
